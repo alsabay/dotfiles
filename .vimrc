@@ -168,15 +168,15 @@ set wildignore+=*/coverage/*
 " and uncomment the part about jedi-vim instead
 " cd ~/.vim/bundle
 " git clone https://github.com/klen/python-mode
-"" map <Leader>g :call RopeGotoDefinition()<CR>
-"" let ropevim_enable_shortcuts = 1
-"" let g:pymode_rope_goto_def_newwin = "vnew"
-"" let g:pymode_rope_extended_complete = 1
-"" let g:pymode_breakpoint = 0
-"" let g:pymode_syntax = 1
-"" let g:pymode_syntax_builtin_objs = 0
-"" let g:pymode_syntax_builtin_funcs = 0
-"" map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
+""map <Leader>g :call RopeGotoDefinition()<CR>
+""let ropevim_enable_shortcuts = 1
+""let g:pymode_rope_goto_def_newwin = "vnew"
+""let g:pymode_rope_extended_complete = 1
+""let g:pymode_breakpoint = 0
+""let g:pymode_syntax = 1
+""let g:pymode_syntax_builtin_objs = 0
+""let g:pymode_syntax_builtin_funcs = 0
+""map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
 
 " Settings for jedi-vim
 " cd ~/.vim/bundle
@@ -188,23 +188,28 @@ map <Leader>b Oimport ipdb; ipdb.set_trace() # BREAKPOINT<C-c>
 
 " Better navigating through omnicomplete option list
 " See http://stackoverflow.com/questions/2170023/how-to-map-keys-for-popup-menu-in-vim
-"" set completeopt=longest,menuone
-"" function! OmniPopup(action)
-""     if pumvisible()
-""         if a:action == 'j'
-""             return "\<C-N>"
-""         elseif a:action == 'k'
-""             return "\<C-P>"
-""         endif
-""     endif
-""     return a:action
-"" endfunction
+set completeopt=longest,menuone
+function! OmniPopup(action)
+    if pumvisible()
+        if a:action == 'j'
+            return "\<C-N>"
+        elseif a:action == 'k'
+            return "\<C-P>"
+        endif
+    endif
+    return a:action
+endfunction
 
-"" inoremap <silent><C-j> <C-R>=OmniPopup('j')<CR>
-"" inoremap <silent><C-k> <C-R>=OmniPopup('k')<CR>
+inoremap <silent><C-j> <C-R>=OmniPopup('j')<CR>
+inoremap <silent><C-k> <C-R>=OmniPopup('k')<CR>
 
 
 " Python folding
 " mkdir -p ~/.vim/ftplugin
 " wget -O ~/.vim/ftplugin/python_editing.vim http://www.vim.org/scripts/download_script.php?src_id=5492
-"" set nofoldenable
+set nofoldenable
+
+" Solidity Syntax
+" git clone https://github.com/tomlion/vim-solidity.git ~/.vim/bundle/vim-solidity
+" Plugin '~/.vim/bundle/vim-solidity'
+" Plug '~/.vim/bundle/vim-solidity'
