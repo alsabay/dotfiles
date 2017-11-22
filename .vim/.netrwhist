@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/private/etc/profile.d'
+let g:netrw_dirhist_2='/usr/local/Cellar/python3/3.6.0/Frameworks/Python.framework/Versions/3.6/lib/python3.6/config-3.6m-darwin'
+let g:netrw_dirhist_3='/Users/alsabay/.vim/bundle/jedi-vim'
+let g:netrw_dirhist_4='/Users/alsabay/MyProjects/WebProjects/LUX/site/css/_notes'
+let g:netrw_dirhist_5='/Users/alsabay/.rstudio-desktop'
